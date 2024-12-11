@@ -2,6 +2,7 @@ package registro;
 
 // import della classe ArrayList
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Registro {
 	/* attributi di questa classe: - un ArrayList di tipo Studente, che conterrà
@@ -9,8 +10,18 @@ public class Registro {
 	 gli studenti che verranno aggiunti. */
 	ArrayList<Studente> elenco = new ArrayList<Studente>();
 
-	public void aggiungi(Studente studente) {
+	public void aggiungi(Studente studente, Scanner scanner) {
 		// aggiungo l'oggetto che nel menù verrà passato come argomento all'ArrayList
+		
+		/* AGGIUNTA successiva (ore 11:19). 
+		   Controllo sulla matricola. Se, scorrendo l'ArrayList, trovo un numero uguale a quello inserito
+		   inizialmente da tastiera, chiedo il re-inserimento del numero di matricola tramite lo scanner.*/
+		for (Studente add: elenco) {
+			if (studente.matricola==add.matricola) {
+				System.out.println("Matricola già inserita. Reinserire matricola (sempre a 4 cifre:) ");
+				studente.matricola = scanner.nextInt();
+				}
+		}
 		elenco.add(studente);
 		
 		// stampa per mandare a capo prima di ritornare al menù

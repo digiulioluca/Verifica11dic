@@ -61,7 +61,7 @@ public class Main {
 				stud.matricola = scanner.nextInt();
 				
 				// richiamo il metodo aggiungi
-				reg1.aggiungi(stud);
+				reg1.aggiungi(stud, scanner);
 				break;
 			case 2:	// stampa elenco
 				reg1.stampaLista();
